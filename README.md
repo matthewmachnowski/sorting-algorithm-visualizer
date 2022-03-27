@@ -1,9 +1,9 @@
-# Sorting Algorithm Visualization
+# Sorting Algorithm Visualizer
 
-A simple pygame sorting algorithm visualization.
+Python sorting algorithm visualizer.
 
 ## How to run it?
 
 - Clone GitHub repository
 - Install requirements: `pip3 install -r requirements.txt`
-- Run `python3 main.py`
+- Run: `python3 main.py`
