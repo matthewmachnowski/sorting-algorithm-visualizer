@@ -1,7 +1,6 @@
 from algorithms import *
 import pygame
 import random
-import math
 pygame.init()
 
 
@@ -28,7 +27,7 @@ class DrawInformation:
     def __init__(self, width, height, lst):
         self.width = width
         self.height = height
-        # width and height passed as a tuple in set_mode
+        # Width and height passed as a tuple in set_mode
         self.window = pygame.display.set_mode((width, height))
         pygame.display.set_caption("Sorting Algorithm Visualization")
 
@@ -46,20 +45,26 @@ class DrawInformation:
         self.max_val = max(lst)
 
         self.block_width = round((self.width - self.SIDE_PAD) / len(lst))
-        self.block_height = math.floor((self.height - self.TOP_PAD) / (self.max_val - self.min_val))
+        self.block_height = int((self.height - self.TOP_PAD) / (self.max_val - self.min_val))
         self.start_x = self.SIDE_PAD // 2
 
 
 def draw(draw_info, algo_name, ascending):
     draw_info.window.fill(draw_info.BACKGROUND_COLOR)
 
-    title = draw_info.LARGE_FONT.render(f"{algo_name} - {'Ascending' if ascending else 'Descending'}", 1, draw_info.DARK_GREEN)
+    title = draw_info.LARGE_FONT.render(f"{algo_name} - "
+                                        f"{'Ascending' if ascending else 'Descending'}", 1, draw_info.DARK_GREEN)
     draw_info.window.blit(title, (draw_info.width/2 - title.get_width()/2, 5))
 
-    controls = draw_info.FONT.render("R - Reset | SPACE - Start Sorting | A - Ascending | D - Descending", 1, draw_info.BLACK)
+    controls = draw_info.FONT.render("R - Reset | "
+                                     "SPACE - Start Sorting | "
+                                     "A - Ascending | "
+                                     "D - Descending", 1, draw_info.BLACK)
     draw_info.window.blit(controls, (draw_info.width/2 - controls.get_width()/2, 55))
 
-    sorting = draw_info.FONT.render("I - Insertion Sort | B - Bubble Sort | S - Selection Sort", 1, draw_info.BLACK)
+    sorting = draw_info.FONT.render("I - Insertion Sort | "
+                                    "B - Bubble Sort | "
+                                    "S - Selection Sort", 1, draw_info.BLACK)
     draw_info.window.blit(sorting, (draw_info.width/2 - sorting.get_width()/2, 90))
 
     draw_list(draw_info)
@@ -120,7 +125,7 @@ def main():
     sorting_algorithm_generator = None
 
     while run:
-        clock.tick(90)
+        clock.tick(100)
 
         if sorting:
             try:
