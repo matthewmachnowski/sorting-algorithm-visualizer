@@ -1,6 +1,9 @@
 # Sorting Algorithm Visualizer
 
-Python sorting algorithm visualizer.
+Python sorting algorithm visualizer. So far it contains three sorting algorithms:
+- bubble sort
+- insertion sort
+- selection sort
 
 ## How to run it?
 
