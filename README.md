@@ -1,6 +1,6 @@
 # Sorting Algorithm Visualizer
 
-Python sorting algorithm visualizer. So far it contains three sorting algorithms:
+Program made with Python and Pygame module for visualizing sorting algorithms. So far it contains three sorting algorithms:
 - bubble sort
 - insertion sort
 - selection sort
